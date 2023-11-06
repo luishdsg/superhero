@@ -5,7 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import About from './pages/about';
 import Error from './pages/error';
-import Home from './pages/home';
+import Home from './components/design/organism/home';
  
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

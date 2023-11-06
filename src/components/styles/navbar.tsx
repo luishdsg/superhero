@@ -1,5 +1,5 @@
 import InputBase from '@mui/material/InputBase';
-import { alpha, styled } from '@mui/material/styles';
+import { alpha, createTheme, makeStyles, styled } from '@mui/material/styles';
 
 
 export const Search = styled('div')(({ theme }) => ({
@@ -40,3 +40,11 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+export const themeDark = createTheme({
+  palette: {
+    primary: {
+      main: '#212529', // Cor vermelha como exemplo, substitua pelo seu código de cor
+    },
+  },
+});

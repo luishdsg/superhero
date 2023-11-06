@@ -1,5 +1,5 @@
 import React from 'react';
-import { SuperHeroInterface } from '../interface/superhero-interface';
+import { SuperHeroInterface } from '../../../interface/superhero-interface';
 
 type HeroList = {
     heroes: SuperHeroInterface[];
