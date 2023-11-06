@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import  NavBar  from '../molecule/navbar';
-import PainelHero from '../atom/painel-hero';
+import PainelHero from '../molecule/painel-hero';
 import { SuperHeroInterface } from '../../../interface/superhero-interface';
 import { SuperHeroesData } from '../../../services/getSuperHeroesData';
 import filterHeroes from '../atom/filterHeroes';
