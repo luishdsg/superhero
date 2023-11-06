@@ -18,7 +18,14 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import { Search, SearchIconWrapper, StyledInputBase} from '../../styles/navbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-export default function NavBar() {
+
+  type SearchInput = {
+    searchHero: string;
+    onSearchHero: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+
+const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
 
@@ -92,6 +99,8 @@ export default function NavBar() {
             <StyledInputBase
               placeholder="Search…"
               type="text"
+              value={searchHero}
+              onChange={onSearchHero}
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
@@ -114,3 +123,4 @@ export default function NavBar() {
   );
 }
 
+export default NavBar;
