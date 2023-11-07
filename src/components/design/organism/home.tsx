@@ -4,6 +4,7 @@ import PainelHero from '../molecule/painel-hero';
 import { SuperHeroInterface } from '../../../interface/superhero-interface';
 import { SuperHeroesData } from '../../../services/getSuperHeroesData';
 import filterHeroes from '../atom/filterHeroes';
+import Footer from '../molecule/footer';
 
 const Home: React.FC = () => {
     const [heroes, setHeroes] = useState<SuperHeroInterface[]>([]);
@@ -36,6 +37,7 @@ const Home: React.FC = () => {
             <div className="px-0">
                 <PainelHero heroes={displayedHeroes} />
             </div>
+            <Footer/>
         </section>
     );
 };

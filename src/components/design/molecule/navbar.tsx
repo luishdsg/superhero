@@ -34,6 +34,7 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
 
   const renderMobileMenu = (
     <Menu
+   
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{
         vertical: 'top',
@@ -64,7 +65,7 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
   );
   return (
     <ThemeProvider theme={themeDark}>
-      <AppBar position="fixed" enableColorOnDark>
+      <AppBar position="fixed"  className='border-bottom border-warning' enableColorOnDark>
         <Toolbar>
           <Typography
             variant="h6"
