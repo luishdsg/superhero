@@ -132,8 +132,6 @@ export const card = {
   width: '100%',
   height: 'auto'
 }
-export const cardArea = {
-}
 
 export const nameHero = {
   position: 'relative' as 'relative',

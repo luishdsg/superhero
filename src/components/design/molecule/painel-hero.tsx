@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Box, CardActionArea } from '@mui/material';
 import ReactPaginate from 'react-paginate';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import { bebas, card, cardArea, nameHero } from '../../styles/style';
+import { bebas, card, nameHero } from '../../styles/style';
 type HeroList = {
   heroes: SuperHeroInterface[];
 };
@@ -49,12 +49,12 @@ const PainelHero: React.FC<HeroList> = ({ heroes }) => {
   return (
     <div className="px-0">
 
-      <Box sx={{margin: '6rem 0'}} className="row px-0 mx-2">
+      <Box sx={{ margin: '6rem 0' }} className="row px-0 mx-2">
 
         <div className="col-3">
           <Card className="bg-transparent bs-none">
             {limitedHeroes.map((hero) => (
-              <CardActionArea sx={cardArea} key={hero.id} onClick={() => handleItemClick(hero)}  >
+              <CardActionArea key={hero.id} onClick={() => handleItemClick(hero)}  >
                 <CardMedia
                   sx={card}
                   component="img"
@@ -79,7 +79,7 @@ const PainelHero: React.FC<HeroList> = ({ heroes }) => {
         <div className="col-3">
           <Card className="bg-transparent bs-none">
             {limitedHeroes2.map((hero) => (
-              <CardActionArea sx={cardArea} key={hero.id} onClick={() => handleItemClick(hero)} >
+              <CardActionArea key={hero.id} onClick={() => handleItemClick(hero)} >
                 <CardMedia
                   sx={card}
                   component="img"
@@ -104,7 +104,7 @@ const PainelHero: React.FC<HeroList> = ({ heroes }) => {
         <div className="col-3">
           <Card className="bg-transparent bs-none">
             {limitedHeroes3.map((hero) => (
-              <CardActionArea sx={cardArea} key={hero.id} onClick={() => handleItemClick(hero)} >
+              <CardActionArea key={hero.id} onClick={() => handleItemClick(hero)} >
                 <CardMedia
                   sx={card}
                   component="img"
@@ -129,7 +129,7 @@ const PainelHero: React.FC<HeroList> = ({ heroes }) => {
         <div className="col-3">
           <Card className="bg-transparent bs-none">
             {limitedHeroes4.map((hero) => (
-              <CardActionArea sx={cardArea} key={hero.id} onClick={() => handleItemClick(hero)} >
+              <CardActionArea key={hero.id} onClick={() => handleItemClick(hero)} >
                 <CardMedia
                   sx={card}
                   component="img"

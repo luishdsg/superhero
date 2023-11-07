@@ -19,18 +19,15 @@ const Home: React.FC = () => {
                 console.error('Erro:', error);
             }
         };
-
         fetchData();
     }, []);
 
     const onSearchHero = (event: ChangeEvent<HTMLInputElement>) => {
         const term = event.target.value.toLowerCase();
         setSearchHero(term);
-
         const filtered = filterHeroes(heroes, term);
         setFilteredHeroes(filtered);
     };
-
     const displayedHeroes = searchHero ? filteredHeroes : heroes;
 
     return (

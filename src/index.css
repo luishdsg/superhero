@@ -9,11 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p{
+p {
   font-size: .7em !important;
 
 }
-h2{
+
+h2 {
   font-size: 2em !important;
 
 }
@@ -74,13 +75,13 @@ code {
   pointer-events: none;
 }
 
-.bs-none{
+.bs-none {
   box-shadow: none !important;
 }
 
 @media (max-width: 500px) {
-  .col-3{
-  flex: 0 0 auto;
-  width: 50% !important;
+  .col-3 {
+    flex: 0 0 auto;
+    width: 50% !important;
   }
 }

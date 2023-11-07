@@ -116,7 +116,7 @@ const ModalHero: React.FC<ModalProps> = ({ selectedHero, secondSelectedHero, clo
                                     alt="The house from the offer."
                                     src="https://www.freepnglogos.com/uploads/vs-png/vs-fire-icon-png-logo-Image-10.png"
                                 />
-                                
+
 
                             </div>
                             <div className="col-5 d-flex justify-content-center">
