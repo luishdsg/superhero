@@ -1,10 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import  NavBar  from '../molecule/navbar';
+import NavBar from '../molecule/navbar';
 import PainelHero from '../molecule/painel-hero';
 import { SuperHeroInterface } from '../../../interface/superhero-interface';
 import { SuperHeroesData } from '../../../services/getSuperHeroesData';
 import filterHeroes from '../atom/filterHeroes';
-
 
 const Home: React.FC = () => {
     const [heroes, setHeroes] = useState<SuperHeroInterface[]>([]);
@@ -35,11 +34,11 @@ const Home: React.FC = () => {
     const displayedHeroes = searchHero ? filteredHeroes : heroes;
 
     return (
-        <section className="row bg-dark  text-light">
-                <NavBar searchHero={searchHero} onSearchHero={onSearchHero} />
-                <div>
+        <section className="row px-0 bg-dark text-light">
+            <NavBar searchHero={searchHero} onSearchHero={onSearchHero} />
+            <div className="px-0">
                 <PainelHero heroes={displayedHeroes} />
-                </div>
+            </div>
         </section>
     );
 };
@@ -48,4 +47,3 @@ export default Home;
 
 
 
- 

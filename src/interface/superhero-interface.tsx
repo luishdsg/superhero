@@ -1,6 +1,4 @@
-// Arquivo: types.ts
 
-// Tipos para as chaves 'powerstats', 'appearance', 'biography', 'work', 'connections', 'images'
 type Powerstats = {
     intelligence: number;
     strength: number;

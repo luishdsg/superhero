@@ -1,5 +1,5 @@
 import InputBase from '@mui/material/InputBase';
-import { alpha, createTheme, makeStyles, styled } from '@mui/material/styles';
+import { alpha, createTheme, styled } from '@mui/material/styles';
 
 
 export const Search = styled('div')(({ theme }) => ({
@@ -44,7 +44,7 @@ export const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export const themeDark = createTheme({
   palette: {
     primary: {
-      main: '#212529', // Cor vermelha como exemplo, substitua pelo seu código de cor
+      main: '#212529',
     },
   },
 });
@@ -63,17 +63,6 @@ export const box = {
   borderRadius: '10px',
   boxShadow: 24,
   p: 2,
-};
-
-export const containerBox = {
-  position: 'relative',
-  width: '100%',
-  color: 'white',
-  borderRadius: '10px',
-  p: 4,
-};
-export const modals = {
-
 };
 
 export const vs = {
@@ -102,7 +91,7 @@ export const bR2 = {
 export const bgS = {
   maxHeight: '300px',
   width: '100%',
-  maxWidth: '300px',  
+  maxWidth: '300px',
   height: 'auto',
   transition: '.5s',
   '&:hover': {
@@ -119,7 +108,7 @@ export const bgS = {
 };
 
 export const infoHero = {
-  maxWidth: '300px',  
+  maxWidth: '300px',
   width: 'auto',
   color: 'white',
   p: 0.5,
@@ -130,9 +119,25 @@ export const infoHero = {
     maxWidth: '150px',
     fontSize: '1em'
   },
- 
+
 };
 
-export const Bebas = {
-    fontFamily: 'Bebas Neue , sans-serif',
-  }
+export const bebas = {
+  fontFamily: 'Bebas Neue , sans-serif',
+}
+
+export const card = {
+  borderRadius: '10px',
+  border: '1px solid #f7bc0b',
+  width: '100%',
+  height: 'auto'
+}
+export const cardArea = {
+}
+
+export const nameHero = {
+  position: 'relative' as 'relative',
+  left: '5px',
+  color: 'white',
+  textShadow: '2px 3px 3px black'
+}

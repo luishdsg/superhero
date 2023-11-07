@@ -8,16 +8,13 @@ import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import Menu from '@mui/material/Menu';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import { Search, SearchIconWrapper, themeDark, StyledInputBase } from '../../styles/navbar';
+import { Search, SearchIconWrapper, themeDark, StyledInputBase } from '../../styles/style';
 import { ThemeProvider } from '@mui/material/styles';
-
 
 type SearchInput = {
   searchHero: string;
   onSearchHero: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
-
-
 
 const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: SearchInput) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
@@ -35,8 +32,6 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
   };
 
 
-
-
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
@@ -52,7 +47,6 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-
       <MenuItem>
         <Search>
           <SearchIconWrapper>
@@ -62,26 +56,27 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
             placeholder="Pesquisar..."
             value={searchHero}
             onChange={onSearchHero}
-            inputProps={{ 'aria-label': 'search' }}
+            inputProps={{ 'aria-label': 'Pesquisar' }}
           />
         </Search>
       </MenuItem>
-
     </Menu>
   );
-
   return (
     <ThemeProvider theme={themeDark}>
-      <AppBar position="static" enableColorOnDark>
+      <AppBar position="fixed" enableColorOnDark>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
           >
-            SUPERHEROES
+            <Box component="img" 
+             sx={{ width: '100px', height: 'auto'}}
+            src="https://freepngimg.com/download/anime/120027-hero-academia-my-logo-free-clipart-hq.png"
+            />
+            MY HERO ACADEMIA
           </Typography>
-
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Search>
@@ -114,5 +109,4 @@ const NavBar: React.FC<SearchInput> = ({ searchHero, onSearchHero }, props: Sear
     </ThemeProvider>
   );
 }
-
 export default NavBar;

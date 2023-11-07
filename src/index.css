@@ -36,3 +36,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+}
+
+.pagination .active a {
+  color: #fff;
+  background-color: #f7bc0b;
+  border-radius: 5px;
+}
+
+.pagination .previous a,
+.pagination .next a {
+  color: #f7bc0b;
+  font-weight: bold;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.bs-none{
+  box-shadow: none !important;
+}
+
+@media (max-width: 500px) {
+  .col-3{
+  flex: 0 0 auto;
+  width: 50% !important;
+  }
+}
